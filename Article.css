@@ -1,0 +1,146 @@
+:root {
+    --bgwhite: #FDF6ED;
+    --titlewhite: #FFF;
+    --warmbeige: #ffedd3;
+    --lightsage: #9cb080;
+    --sage:#3d7c67;
+    --darksage: #324148;
+
+    --scrollbar: var(--sage) var(--warmbeige);
+    --boarderstyle: 3px outset var(--sage)
+}
+
+html {
+    scrollbar-color: var(--scrollbar);
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--lightsage);
+    font-family: Noto Sans TC, serif;
+    font-weight: 500;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    image-rendering: crisp-edges;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#text_box {
+    
+    margin-top: 30px;
+
+    width: 975px;
+
+    border: var(--boarderstyle);
+    border-radius: 2px;
+
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: var(--bgwhite);
+}
+
+.header{
+    height: 110px;
+    width: 975px;
+
+    border: var(--boarderstyle);
+    border-radius: 2px;
+
+    background-image: url(image/diamond_tile.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 80px;
+    image-rendering: pixelated;
+
+    padding-top: 10px;
+
+    text-align: center;
+    color: var(--titlewhite);
+    text-shadow: 2px 2px 3px var(--darksage);
+}
+
+.context{
+    margin-top: 10px;
+
+    text-align: left;
+    color: var(--darksage);
+}
+
+.footer{
+    margin-top: 10px;
+
+    width: 1130px;
+    height: 25px;
+
+    border: var(--boarderstyle);
+    border-radius: 2px;
+
+    padding: 2px;
+
+    background-color: var(--bgwhite);
+    align-items: center;
+    text-align: center;
+}
+
+.flower{
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+a {
+    color: var(--sage);
+    text-decoration-style: wavy;
+}
+
+h1 {
+    font-size: 24px;
+    padding: 2px;
+    margin: 0;
+    font-weight: 550;
+}
+
+h2 {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+li {
+    margin-top: 4px;
+}
+
+p {
+    font-size: 16px;
+    padding: 3px;
+    margin: 0;
+}
+
+img {
+    image-rendering: pixelated;
+    width:150px;
+    height: auto;
+}
+

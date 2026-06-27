@@ -138,9 +138,34 @@ p {
     margin: 0;
 }
 
-img {
-    image-rendering: pixelated;
-    width:150px;
-    height: auto;
+.image_container{
+    text-align: justify;
 }
 
+img {
+    image-rendering: pixelated;
+}
+
+pre{
+    background-color: var(--warmbeige);
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+code{
+    background-color: var(--warmbeige);
+    border-radius: 3px;
+    padding: 0 3px;
+    color:#000;
+}
+
+span {
+    font-size: 14px;
+    padding: 3px;
+    margin: 0;
+}
+
+.pic_note{
+    max-width: 600px;
+    margin: 0;
+}

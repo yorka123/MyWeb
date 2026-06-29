@@ -1,10 +1,13 @@
 :root {
-    --bgwhite: #FDF6ED;
+    --bgwhite: #fdf6ed;
     --titlewhite: #FFF;
     --warmbeige: #ffedd3;
-    --lightsage: #9cb080;
-    --sage:#3d7c67;
-    --darksage: #324148;
+    --lightsage: #98b274;
+    --sage:#2f8065;
+    --darksage: #0e2920;
+    --voidsage: #051811;
+
+    --pagewidth: 975px;
 
     --scrollbar: var(--sage) var(--warmbeige);
     --boarderstyle: 3px outset var(--sage)

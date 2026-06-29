@@ -1,10 +1,10 @@
 :root {
-    --bgwhite: #FDF6ED;
+    --bgwhite: #fdf6ed;
     --titlewhite: #FFF;
     --warmbeige: #ffedd3;
-    --lightsage: #9cb080;
-    --sage:#3d7c67;
-    --darksage: #324148;
+    --lightsage: #98b274;
+    --sage:#2f8065;
+    --darksage: #0e2920;
     --voidsage: #051811;
 
     --pagewidth: 975px;
@@ -54,19 +54,57 @@ body {
 
     display: flex;
     flex-direction: row;
-    align-items: end;
+    justify-content: space-around;
 }
 
 .profile{
-    width: 25%;
     height: 100%;
-    background-color: var(--darksage);
+    width: 32%;
+}
+
+.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    animation: play-frames 0.4s infinite;
+}
+
+@keyframes play-frames {
+  0%{
+    content: url(image/funni_profile_picture.png);
+  }
+  50%{
+    content: url(image/f2_funni_profile_picture.png);
+  }
+}
+
+.right_container{
+    width: 70%;
+    height: 100%;
+
+    gap:10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.thinking_bubble{
+    height: 40%;
+    width: auto;
+    background-image: url(image/thinking_bubble.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+
+    padding-top: 40px;
+    padding-left: 115px;
 }
 
 .intoduction{
-    width: 75%;
-    height:45%;
+    height: 60%;
     background-color: var(--darksage);
+    color: var(--bgwhite);
 }
 
 .bottom_container{
@@ -82,14 +120,47 @@ body {
     align-items: center;
 }
 
-.unit{
+.unit_container{
     width: 33%;
-    height: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
     background-color: var(--warmbeige);
+}
+
+.unit_title{
+    height: 4%;
+    background-color: var(--warmbeige);
+    line-height: 0;
+}
+
+.unit_context{
+
+    height: 90%;
+
+    color: var(--voidsage);
+
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 .footer{
     width: calc(100% - 25px);
     height: 50px;
     background-color: var(--bgwhite);
+}
+
+p{
+    margin: 0;
+    padding: 2px;
+}
+
+h3{
+    margin: 0;
+    padding: 3px;
+}
+
+a {
+    color: var(--lightsage);
+    text-decoration-style: wavy;
 }

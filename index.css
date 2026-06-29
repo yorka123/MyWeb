@@ -1,10 +1,10 @@
 :root {
-    --bgwhite: #FDF6ED;
+    --bgwhite: #fdf6ed;
     --titlewhite: #FFF;
     --warmbeige: #ffedd3;
-    --lightsage: #9cb080;
-    --sage:#3d7c67;
-    --darksage: #324148;
+    --lightsage: #98b274;
+    --sage:#2f8065;
+    --darksage: #0e2920;
     --voidsage: #051811;
 
     --pagewidth: 975px;
@@ -14,7 +14,9 @@
 }
 
 body {
-    font-family: "Courier New", Courier, monospace;
+    font-family: "Noto Sans TC", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 @keyframes infinite-scroll-background{
@@ -90,7 +92,7 @@ body {
 
 .center_container{
     
-    margin: 10%;
+    margin-top: 10%;
 
     width: 750px;
     height:500px;
@@ -105,7 +107,7 @@ body {
     border: var(--boarderstyle);
     border-radius: 2px;
 
-    background: var(--bgwhite); 
+    background-color: #f1ffb2b7;
 }
 
 .title {
@@ -113,13 +115,46 @@ body {
     height: 100%;
     background-color: var(--lightsage);
 
+    box-sizing: border-box;
+    border: var(--boarderstyle);
+    border-radius: 2px;
+
+    text-align: center;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: var(--voidsage);
+    line-height: 90px;
+
+    background-image: url(image/diamond_tile.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 40px;
+    image-rendering: pixelated;
     grid-area: 1 / 1 / 2 / 2;
+
+    transition-property: all;
+    transition: 0.2s linear;
+}
+
+.title:hover{
+    color: var(--bgwhite);
+    text-shadow: 0 0 2px var(--darksage), 0 0 4px var(--darksage);
 }
 
 .introduction {
+    box-sizing: border-box;
+    border: var(--boarderstyle);
+    border-radius: 2px;
+
     width:100%;
     height:100%;
-    background-color: var(--lightsage);
+    background-color: var(--bgwhite);
+
+    font-size: 18px;
+    padding: 4px;
+    margin: 0;
 
     grid-area: 2 / 1 / 3 / 2;
 }
@@ -153,37 +188,51 @@ body {
 
     padding-top: 24%;
 
+    font-family: "Courier New", Courier, monospace;
     text-align: center;
-    color: #273338;
+    color: var(--darksage);
     font-weight: bold;
     font-size: 35px;
+
+    transition-property: all;
+    transition: 0.2s ease-in-out;
 }
 
 .box_button:hover {
-    border: 2px inset #fff;
-    background: rgb(123, 123, 123);
-    color: #ffffff;
-    box-shadow: -1px -1px #000;
+    border: 2px inset var(--darksage);
+    color: var(--bgwhite);
+    box-shadow: -2px -2px var(--darksage);
 }
 .box_button:focus {
-    border: 2px inset #fff !important;
-    background: silver;
-    color: #424242;
-    box-shadow: -1px -1px #000 !important;
+    border: 2px inset var(--bgwhite) !important;
+    color: var(--bgwhite);
+    box-shadow: -2px -2px var(--warmbeige)!important;
     outline: 0 !important;
-    background: rgb(183, 183, 183);
 }
 .box_button:active {
-    border: 2px inset #fff !important;
-    color: #424242;
-    box-shadow: -1px -1px #000 !important;
+    border: 2px inset var(--bgwhite) !important;
+    color: var(--bgwhite);
+    box-shadow: -2px -2px var(--warmbeige) !important;
     outline: 0 !important;
-    background: rgb(183, 183, 183);
 }
 /*stolen css from 2010!*/
+
+.footer{
+    color:var(--bgwhite);
+    margin: 0;
+    line-height: 0;
+}
 
 a 
 {
     color: var(--darksage);
     text-decoration: none;
+}
+
+h1{
+    margin:0;
+}
+
+span{
+    color: var(--sage);
 }

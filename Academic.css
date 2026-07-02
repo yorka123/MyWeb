@@ -15,21 +15,6 @@
 
 body {
     margin: 10px;
-    background-color: var(--bgwhite);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.container{
-    box-sizing: border-box;
-    border: var(--boarderstyle);
-    border-radius: 2px;
-
-    width: 100%;
-    height: 100%;
-
     background-color: var(--darksage);
 
     display: flex;
@@ -37,43 +22,99 @@ body {
     align-items: center;
 }
 
+.container{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.center_container{
+    width: 90%;
+    height: fit-content;
+    background-color: var(--bgwhite);
+
+    box-sizing: border-box;
+    border: var(--boarderstyle);
+    border-radius: 2px;
+}
+
 .header{
     width: 100%;
-    height: 10%;
+    height: 4%;
     background-color: var(--warmbeige);
+}
+
+h1{
+    font-size: 32px;
+    line-height: 25px;
+    margin: 0;
 }
 
 .content{
     width: 100%;
-    height: 90%;
     box-sizing: border-box;
-    background-color: #9cb080;
 
-    padding: 25px;
+    padding: 20px;
 }
 
 .item_grid{
     width: 100%;
-    height: 100%;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 15px;
-    grid-row-gap: 15px;
-    place-items: center;
-    
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+
+    align-items: center;
 }
 
 .item{
-    width: 220px;
-    height: 320px;
-    background-color: var(--titlewhite);
+    width: auto;
+    height: 100%;
+
+    box-sizing: border-box;
+    border: 3px outset var(--lightsage);
+    border-radius: 2px;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    align-items: center;
 }
 
-h1{
-    font-size: 18px;
+.thumbnail img{
+    height:250px;
+    width: auto;
+    max-width: 350px;
+    object-fit: contain;
+    transition: 0.1s ease-in-out;
 }
+.thumbnail img:hover{
+    transform: scale(1.02);
+    cursor: zoom-in;
+}
+
+.text_box{
+    text-align: center;
+    max-width: 400px;
+
+}
+
+#downwell{
+    flex-direction: row;
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+img {
+  display: block;
+}
+
 p{
     font-size: 14px;
+    margin: 0;
 }
